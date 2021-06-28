@@ -1,0 +1,9 @@
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\bin\Debug\netcoreapp3.1\SharedLibrary.deps.json
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\bin\Debug\netcoreapp3.1\SharedLibrary.dll
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\bin\Debug\netcoreapp3.1\SharedLibrary.pdb
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\obj\Debug\netcoreapp3.1\SharedLibrary.AssemblyInfoInputs.cache
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\obj\Debug\netcoreapp3.1\SharedLibrary.AssemblyInfo.cs
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\obj\Debug\netcoreapp3.1\SharedLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\obj\Debug\netcoreapp3.1\SharedLibrary.dll
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\obj\Debug\netcoreapp3.1\SharedLibrary.pdb
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\SharedLibrary\obj\Debug\netcoreapp3.1\SharedLibrary.csproj.AssemblyReference.cache

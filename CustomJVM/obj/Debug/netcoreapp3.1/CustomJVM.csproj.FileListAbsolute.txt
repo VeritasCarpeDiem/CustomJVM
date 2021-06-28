@@ -1,0 +1,16 @@
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\CustomJVM.exe
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\CustomJVM.deps.json
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\CustomJVM.runtimeconfig.json
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\CustomJVM.runtimeconfig.dev.json
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\CustomJVM.dll
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\CustomJVM.pdb
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\SharedLibrary.dll
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\bin\Debug\netcoreapp3.1\SharedLibrary.pdb
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.csproj.AssemblyReference.cache
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.AssemblyInfoInputs.cache
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.AssemblyInfo.cs
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.csproj.CoreCompileInputs.cache
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.csproj.CopyComplete
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.dll
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.pdb
+C:\Users\Veritas\Documents\Visual Studio 2019\Projects\CustomJVM\CustomJVM\obj\Debug\netcoreapp3.1\CustomJVM.genruntimeconfig.cache
