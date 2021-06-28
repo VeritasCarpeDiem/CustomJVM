@@ -1,4 +1,4 @@
-# <p style="text-align: center;">Custom JVM</p>
+# <p align= "center">Custom JVM</p>
   
 ## Java Virtual Machine Specification:
   - Based on [Java SE 16 Edition](https://docs.oracle.com/javase/specs/jvms/se16/html/index.html)
