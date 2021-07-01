@@ -9,5 +9,5 @@
  2. Compile program: ``javac (class name here).java``
  3. Decompile code: ``javap -v (class name here).class > (class name here).decompile
 ## TO DO: 
-- [ X ] Debug and Execute Add() method  
+- [X] Debug and Execute Add() method  
 - [ ] Fix ``invoke static`` instruction
