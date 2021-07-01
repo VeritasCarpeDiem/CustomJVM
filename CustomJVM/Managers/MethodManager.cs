@@ -34,9 +34,7 @@ namespace CustomJVM.Managers
                 cur.Parse(ref hexdump, pool);
                 methods[i] = cur;
 
-                 
             }
-            ;
         }
 
     }

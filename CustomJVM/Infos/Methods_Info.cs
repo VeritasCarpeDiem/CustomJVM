@@ -42,17 +42,16 @@ namespace CustomJVM.Infos
                 
             }
 
-            locals = new uint?[code_Attribute.Max_Locals];
+            //locals = new uint?[code_Attribute.Max_Locals];
         }
         private Code_attribute code_Attribute;
-        public uint?[] locals;
-        
+        public static uint?[] locals;
+        public static Stack<uint?> stack = new Stack<uint?>();
+
         public uint? Execute(Constant_Pool pool, MethodManager manager)
         {
             byte[] code = code_Attribute.Code;
             
-            Stack<uint?> stack = new Stack<uint?>();
-
             for (int i = 0; i < code.Length; i++)
             {
                 var opCode = (InstructionType)code[i];
@@ -76,6 +75,9 @@ namespace CustomJVM.Infos
                         break;
                     case InstructionType.iload_2:
                         stack.Push(locals[2]);
+                        break;
+                    case InstructionType.iload_0:
+                        stack.Push(locals[0]);
                         break;
                     case InstructionType.iadd:
                         var result = stack.Pop() + stack.Pop();
@@ -106,34 +108,28 @@ namespace CustomJVM.Infos
 
                         var numberOfParameters = parsedDescriptor.parameters.Count; //2
 
-                        Method_Info add_info = null;
-                        foreach (var methodInfo in manager)
+                        locals = new uint?[numberOfParameters];
+                        for (int j = 0; j < numberOfParameters; j++)
                         {
-                            UTF8_Info info = (UTF8_Info)pool[methodInfo.Name_Index - 1];
-                            string method_name2 = info.UTF8ToString();
-                            if(method_name2 =="<init>" || method_name2 =="main")
-                            {
-                                continue;
-                            }
-                            if(method_name2 =="Add")
-                            {
-                                add_info = methodInfo;
-                                Add(pool, manager);
-                                break;
-                            }
+                            locals[j] = stack.Pop();
                         }
+
+                        return null;
                         break;
                     case InstructionType.iconst_2:
                         stack.Push(2);
-                        locals[0] = stack.Pop();
+                        //locals[0] = stack.Pop();
                         break;
                     case InstructionType.iconst_3:
                         stack.Push(3);
-                        locals[1] = stack.Pop();
+                        //locals[1] = stack.Pop();
                         break;
                     case InstructionType.pop:
                         stack.Pop();
                         break;
+                    case InstructionType.ireturn:
+                        return stack.Pop();
+                    //break;
                     default:
                         throw new NotImplementedException($"OpCode missing: 0x{opCode:X}");
                 }
@@ -171,37 +167,37 @@ namespace CustomJVM.Infos
             return (parameters,returnTypeValue);
         }
 
-        public uint? Add(Constant_Pool pool, MethodManager methodManager)
-        {
-            byte[] code = code_Attribute.Code;
+        //public uint? Add(Constant_Pool pool, MethodManager methodManager)
+        //{
+        //    byte[] code = code_Attribute.Code;
 
-            Stack<uint?> stack = new Stack<uint?>();
-            for (int i = 0; i < code.Length; i++)
-            {
-                InstructionType opCode = (InstructionType)code[i];
+        //    Stack<uint?> stack = new Stack<uint?>();
+        //    for (int i = 0; i < code.Length; i++)
+        //    {
+        //        InstructionType opCode = (InstructionType)code[i];
 
-                switch (opCode)
-                {
-                    case InstructionType.iload_0:
-                        stack.Push(locals[0]);
-                        break;
-                    case InstructionType.iload_1:
-                        stack.Push(locals[1]);
-                        break;
-                    case InstructionType.iadd:
-                        var result = stack.Pop() + stack.Pop();
-                        stack.Push(result);
-                        break;
-                    case InstructionType.ireturn:
-                        return stack.Pop();
-                        //break;
-                    default:
-                        throw new NotImplementedException("yeet");
-                        break;
-                }
-            }
-            return null;
-        }
+        //        switch (opCode)
+        //        {
+        //            case InstructionType.iload_0:
+        //                stack.Push(locals[0]);
+        //                break;
+        //            case InstructionType.iload_1:
+        //                stack.Push(locals[1]);
+        //                break;
+        //            case InstructionType.iadd:
+        //                var result = stack.Pop() + stack.Pop();
+        //                stack.Push(result);
+        //                break;
+        //            case InstructionType.ireturn:
+        //                return stack.Pop();
+        //                //break;
+        //            default:
+        //                throw new NotImplementedException("yeet");
+        //                break;
+        //        }
+        //    }
+        //    return null;
+        //}
     }
    
 }
