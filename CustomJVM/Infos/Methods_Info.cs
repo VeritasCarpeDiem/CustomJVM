@@ -39,13 +39,12 @@ namespace CustomJVM.Infos
                 {
                     code_Attribute = (Code_attribute)newInfo;
                 }
-                
             }
 
-            //locals = new uint?[code_Attribute.Max_Locals];
+            locals = new uint?[code_Attribute.Max_Locals];
         }
         private Code_attribute code_Attribute;
-        public static uint?[] locals;
+        public uint?[] locals;
         public static Stack<uint?> stack = new Stack<uint?>();
 
         public uint? Execute(Constant_Pool pool, MethodManager manager)
@@ -108,21 +107,29 @@ namespace CustomJVM.Infos
 
                         var numberOfParameters = parsedDescriptor.parameters.Count; //2
 
-                        locals = new uint?[numberOfParameters];
+                        Method_Info method_to_execute = null;
+                        foreach (var  method_Info in manager)
+                        {
+                            UTF8_Info info = (UTF8_Info)pool[method_Info.Name_Index - 1];
+                            string method_name_ = info.UTF8ToString();
+                            if (method_name == method_name_)
+                            {
+                                method_to_execute = method_Info;
+                                break;
+                            }
+                        }
+                        //locals = new uint?[method_to_execute.code_Attribute.Max_Locals];
                         for (int j = 0; j < numberOfParameters; j++)
                         {
-                            locals[j] = stack.Pop();
+                            method_to_execute.locals[j] = stack.Pop();
                         }
-
-                        return null;
+                        stack.Push(method_to_execute.Execute(pool, manager));
                         break;
                     case InstructionType.iconst_2:
                         stack.Push(2);
-                        //locals[0] = stack.Pop();
                         break;
                     case InstructionType.iconst_3:
                         stack.Push(3);
-                        //locals[1] = stack.Pop();
                         break;
                     case InstructionType.pop:
                         stack.Pop();
