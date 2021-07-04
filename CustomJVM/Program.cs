@@ -142,25 +142,6 @@ namespace CustomJVM
             main_info.Execute(pool, methodManager);
             #endregion
 
-            //#region Execute Add method
-            //Method_Info add_info = null;
-            //foreach (var methodInfo in methodManager)
-            //{
-            //    UTF8_Info info = (UTF8_Info)pool[methodInfo.Name_Index - 1];
-            //    string method_name = info.UTF8ToString();
-            //    if(method_name != "Add")
-            //    {
-            //        continue;
-            //    }
-            //    if (method_name == "Add")
-            //    {
-            //        add_info = methodInfo;
-            //        break;
-            //    }
-            //}
-            //Console.WriteLine(add_info.Execute(pool, methodManager));
-            //#endregion
-
         }
     }
 }

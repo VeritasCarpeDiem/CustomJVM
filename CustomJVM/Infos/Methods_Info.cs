@@ -118,7 +118,6 @@ namespace CustomJVM.Infos
                                 break;
                             }
                         }
-                        //locals = new uint?[method_to_execute.code_Attribute.Max_Locals];
                         for (int j = 0; j < numberOfParameters; j++)
                         {
                             method_to_execute.locals[j] = stack.Pop();
@@ -174,37 +173,6 @@ namespace CustomJVM.Infos
             return (parameters,returnTypeValue);
         }
 
-        //public uint? Add(Constant_Pool pool, MethodManager methodManager)
-        //{
-        //    byte[] code = code_Attribute.Code;
-
-        //    Stack<uint?> stack = new Stack<uint?>();
-        //    for (int i = 0; i < code.Length; i++)
-        //    {
-        //        InstructionType opCode = (InstructionType)code[i];
-
-        //        switch (opCode)
-        //        {
-        //            case InstructionType.iload_0:
-        //                stack.Push(locals[0]);
-        //                break;
-        //            case InstructionType.iload_1:
-        //                stack.Push(locals[1]);
-        //                break;
-        //            case InstructionType.iadd:
-        //                var result = stack.Pop() + stack.Pop();
-        //                stack.Push(result);
-        //                break;
-        //            case InstructionType.ireturn:
-        //                return stack.Pop();
-        //                //break;
-        //            default:
-        //                throw new NotImplementedException("yeet");
-        //                break;
-        //        }
-        //    }
-        //    return null;
-        //}
     }
    
 }

@@ -16,21 +16,12 @@ namespace CustomJVM.Attributes
             
         }
 
-        //public static byte[] Code { get; set; }
         public ushort Max_Stack{ get; private set; }
         public ushort Max_Locals { get; private set; }
         public uint Code_Length { get; private set; }
         public ushort Exception_Table_Length { get; private set; }
         public Exception_Table[] exception_Table{ get; private set; }
         public ushort Attributes_Count { get; private set; }
-
-        //public ushort Execute(Method_Info main_info)
-        //{
-        //    uint?[] machineCode = new uint?[Code_Length];
-
-
-        //    main_info.Attributes[0].
-        //}
 
         public override void Parse(ref Memory<byte> hexdump, Constant_Pool pool)
         {
